@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://b8bp7dq03n0c5"]
+
+[ext_resource type="Texture2D" uid="uid://b437pehyk2asd" path="res://Assets/Scenario/Structures/trampolin_1.png" id="1_gg1f7"]
+[ext_resource type="Texture2D" uid="uid://dy2n2qfd7n6bu" path="res://Assets/Scenario/Structures/trampolin_2.png" id="2_uinb3"]
+[ext_resource type="Texture2D" uid="uid://baqfijiqdnxb6" path="res://Assets/Scenario/Structures/trampolin_3.png" id="3_4hvud"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_brhop"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_gg1f7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_uinb3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4hvud")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3cak1"]
+size = Vector2(82, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_slehu"]
+size = Vector2(80, 24)
+
+[node name="Jump_Pad" type="RigidBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_brhop")
+
+[node name="Bounce_Floor" type="CollisionShape2D" parent="."]
+position = Vector2(2, 16)
+shape = SubResource("RectangleShape2D_3cak1")
+
+[node name="Detect_Jump_Pad" type="CollisionShape2D" parent="."]
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_slehu")

@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://du81mri8uddpp"]
+
+[ext_resource type="PackedScene" uid="uid://cqfsi6hjn6jeh" path="res://Scenes/Components/fondo.tscn" id="1_bhyco"]
+[ext_resource type="PackedScene" uid="uid://b3002vtpmopu6" path="res://Scenes/Components/player.tscn" id="2_ojry3"]
+[ext_resource type="PackedScene" uid="uid://de25f2x5fspnr" path="res://Scenes/Components/Scenario/grass_floor.tscn" id="3_860y0"]
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="3_moftt"]
+
+[node name="main" type="Node2D"]
+position = Vector2(315, 233)
+
+[node name="Fondo" type="Node2D" parent="."]
+
+[node name="Fondo" parent="Fondo" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="Fondo" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="Fondo" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="Fondo" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Player" parent="." instance=ExtResource("2_ojry3")]
+position = Vector2(-202, -152)
+script = ExtResource("3_moftt")
+
+[node name="Grass_floor" parent="." instance=ExtResource("3_860y0")]
+position = Vector2(-85, -92)
+gravity_scale = 0.0
