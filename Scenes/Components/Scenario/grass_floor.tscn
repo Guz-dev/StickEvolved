@@ -25,11 +25,14 @@ animations = [{
 size = Vector2(117, 21.25)
 
 [node name="Grass_floor" type="RigidBody2D"]
+gravity_scale = 0.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(3, 2)
 sprite_frames = SubResource("SpriteFrames_md5pe")
-frame_progress = 0.522118
+autoplay = "default"
+frame = 1
+frame_progress = 0.325789
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1.5, 3.25)

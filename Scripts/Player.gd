@@ -22,7 +22,19 @@ func _physics_process(delta):
 	var direction = Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = direction * SPEED
+		
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
+	decide_animation()
 	move_and_slide()
+
+func decide_animation():
+	if velocity.x == 0:
+		$animaciones.play("idle")
+	elif velocity.x < 0:
+		$animaciones.flip_h = true
+		$animaciones.play("movement")
+	else:
+		$animaciones.flip_h = false
+		$animaciones.play("movement")
