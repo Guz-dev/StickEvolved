@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://ow1ajturcx8e"]
+
+[ext_resource type="Texture2D" uid="uid://c3kvgy31um4f5" path="res://Assets/Sprites/Scenario/Structures/dirt/piso_tierra.png" id="1_mntpc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_md5pe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mntpc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jo52s"]
+size = Vector2(114.333, 21.25)
+
+[node name="Dirt_floor" type="RigidBody2D"]
+rotation = 1.5708
+gravity_scale = 0.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(3, 2)
+sprite_frames = SubResource("SpriteFrames_md5pe")
+autoplay = "default"
+frame_progress = 0.325789
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2.5, 3.25)
+scale = Vector2(3, 2)
+shape = SubResource("RectangleShape2D_jo52s")
