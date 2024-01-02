@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cqfsi6hjn6jeh"]
-
-[ext_resource type="Texture2D" uid="uid://cfyyfr7blq1iq" path="res://Assets/Scenario/hola de cuaderno.png" id="1_caamm"]
-
-[node name="Fondo" type="Node2D"]
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_caamm")

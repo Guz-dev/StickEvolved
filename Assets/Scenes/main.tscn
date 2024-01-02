@@ -1,0 +1,66 @@
+[gd_scene load_steps=4 format=3 uid="uid://du81mri8uddpp"]
+
+[ext_resource type="PackedScene" uid="uid://cqfsi6hjn6jeh" path="res://Assets/Scenes/Components/fondo.tscn" id="1_bhyco"]
+[ext_resource type="PackedScene" uid="uid://b3002vtpmopu6" path="res://Assets/Scenes/Components/Characters/player.tscn" id="2_ojry3"]
+[ext_resource type="PackedScene" uid="uid://de25f2x5fspnr" path="res://Assets/Scenes/Components/Scenario/grass_floor.tscn" id="3_860y0"]
+
+[node name="main" type="Node2D"]
+position = Vector2(315, 233)
+
+[node name="Fondo5" type="Node2D" parent="."]
+
+[node name="Fondo" parent="Fondo5" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="Fondo5" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="Fondo5" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="Fondo5" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo" type="Node2D" parent="."]
+position = Vector2(1249, 0)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="Fondo" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="Fondo" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="Fondo" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="Fondo" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo5" parent="Fondo" instance=ExtResource("1_bhyco")]
+position = Vector2(-1869, -22)
+
+[node name="Fondo6" parent="Fondo" instance=ExtResource("1_bhyco")]
+position = Vector2(-1248, -439)
+
+[node name="Fondo7" parent="Fondo" instance=ExtResource("1_bhyco")]
+position = Vector2(-1874, -439)
+
+[node name="Fondo8" parent="Fondo" instance=ExtResource("1_bhyco")]
+position = Vector2(-625, -439)
+
+[node name="Fondo9" parent="Fondo" instance=ExtResource("1_bhyco")]
+position = Vector2(-1874, 377)
+
+[node name="Player" parent="." instance=ExtResource("2_ojry3")]
+position = Vector2(-202, -152)
+
+[node name="Escenario" type="Node2D" parent="."]
+position = Vector2(-333, -238)
+metadata/_edit_group_ = true
+
+[node name="Grass_floor" parent="Escenario" instance=ExtResource("3_860y0")]
+position = Vector2(230, 141)
+
+[node name="Grass_floor2" parent="Escenario" instance=ExtResource("3_860y0")]
+position = Vector2(950, 143)

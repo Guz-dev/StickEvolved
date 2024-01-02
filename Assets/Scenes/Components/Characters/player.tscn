@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3002vtpmopu6"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/Player.gd" id="1_26lp2"]
+[ext_resource type="SpriteFrames" uid="uid://kkemophe5cnf" path="res://Assets/Sprites/Player/Animations/movePlayer.tres" id="1_237to"]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_26lp2")
+metadata/_edit_group_ = true
+
+[node name="animaciones" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_237to")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-61, 13, 21, 14, 38, 22, 54, 10, 53, -5, 38, -14, 25, -6, 21, 2, -60, 1)
+
+[node name="Camera2D" type="Camera2D" parent="."]

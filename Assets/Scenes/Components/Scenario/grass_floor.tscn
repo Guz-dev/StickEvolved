@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://de25f2x5fspnr"]
+
+[ext_resource type="Texture2D" uid="uid://bjqwx68lpr3hd" path="res://Assets/Sprites/Scenario/Structures/grass/piso_pasto_1.png" id="1_ji82q"]
+[ext_resource type="Texture2D" uid="uid://bg2feohu141fk" path="res://Assets/Sprites/Scenario/Structures/grass/piso_pasto_2.png" id="2_iwuyo"]
+[ext_resource type="Texture2D" uid="uid://bkk8cceotal0s" path="res://Assets/Sprites/Scenario/Structures/grass/piso_pasto_3.png" id="3_70rmx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_md5pe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ji82q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_iwuyo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_70rmx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jo52s"]
+size = Vector2(117, 21.25)
+
+[node name="Grass_floor" type="RigidBody2D"]
+gravity_scale = 0.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(3, 2)
+sprite_frames = SubResource("SpriteFrames_md5pe")
+autoplay = "default"
+frame = 1
+frame_progress = 0.325789
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, 3.25)
+scale = Vector2(3, 2)
+shape = SubResource("RectangleShape2D_jo52s")
