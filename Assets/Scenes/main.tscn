@@ -1,13 +1,405 @@
-[gd_scene load_steps=4 format=3 uid="uid://du81mri8uddpp"]
+[gd_scene load_steps=8 format=3 uid="uid://du81mri8uddpp"]
 
 [ext_resource type="PackedScene" uid="uid://cqfsi6hjn6jeh" path="res://Assets/Scenes/Components/fondo.tscn" id="1_bhyco"]
 [ext_resource type="PackedScene" uid="uid://b3002vtpmopu6" path="res://Assets/Scenes/Components/Characters/player.tscn" id="2_ojry3"]
+[ext_resource type="PackedScene" uid="uid://b8bp7dq03n0c5" path="res://Assets/Scenes/Components/Scenario/jump_pad.tscn" id="3_1h4nb"]
 [ext_resource type="PackedScene" uid="uid://de25f2x5fspnr" path="res://Assets/Scenes/Components/Scenario/grass_floor.tscn" id="3_860y0"]
+[ext_resource type="PackedScene" uid="uid://ow1ajturcx8e" path="res://Assets/Scenes/Components/Scenario/dirt_wall.tscn" id="3_nip58"]
+[ext_resource type="PackedScene" uid="uid://b2wfxtvii2q7t" path="res://Assets/Scenes/Components/Scenario/spine_dirt.tscn" id="6_3s5i0"]
+[ext_resource type="PackedScene" uid="uid://dpv0hn418trsc" path="res://Assets/Scenes/Components/Scenario/lava_floor.tscn" id="6_lejea"]
 
 [node name="main" type="Node2D"]
 position = Vector2(315, 233)
 
+[node name="FondoContainer4" type="Node2D" parent="."]
+metadata/_edit_group_ = true
+
+[node name="Fondo" type="Node2D" parent="FondoContainer4"]
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer4/Fondo" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer4/Fondo" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer4/Fondo" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer4/Fondo" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo2" type="Node2D" parent="FondoContainer4"]
+position = Vector2(1249, 0)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer4/Fondo2" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer4/Fondo2" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer4/Fondo2" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer4/Fondo2" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo3" type="Node2D" parent="FondoContainer4"]
+position = Vector2(-1249, 0)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer4/Fondo3" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer4/Fondo3" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer4/Fondo3" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer4/Fondo3" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo4" type="Node2D" parent="FondoContainer4"]
+position = Vector2(0, -816)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer4/Fondo4" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer4/Fondo4" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer4/Fondo4" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer4/Fondo4" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo5" type="Node2D" parent="FondoContainer4"]
+position = Vector2(1249, -816)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer4/Fondo5" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer4/Fondo5" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer4/Fondo5" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer4/Fondo5" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo6" type="Node2D" parent="FondoContainer4"]
+position = Vector2(-1249, -816)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer4/Fondo6" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer4/Fondo6" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer4/Fondo6" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer4/Fondo6" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo7" type="Node2D" parent="FondoContainer4"]
+position = Vector2(0, 816)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer4/Fondo7" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer4/Fondo7" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer4/Fondo7" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer4/Fondo7" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo7" type="Node2D" parent="FondoContainer4/Fondo7"]
+position = Vector2(0, 816)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer4/Fondo7/Fondo7" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer4/Fondo7/Fondo7" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer4/Fondo7/Fondo7" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer4/Fondo7/Fondo7" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo8" type="Node2D" parent="FondoContainer4/Fondo7"]
+position = Vector2(1249, 816)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer4/Fondo7/Fondo8" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer4/Fondo7/Fondo8" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer4/Fondo7/Fondo8" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer4/Fondo7/Fondo8" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo9" type="Node2D" parent="FondoContainer4/Fondo7"]
+position = Vector2(-1249, 816)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer4/Fondo7/Fondo9" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer4/Fondo7/Fondo9" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer4/Fondo7/Fondo9" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer4/Fondo7/Fondo9" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo13" type="Node2D" parent="FondoContainer4/Fondo7"]
+position = Vector2(3747, 816)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer4/Fondo7/Fondo13" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer4/Fondo7/Fondo13" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer4/Fondo7/Fondo13" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer4/Fondo7/Fondo13" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo14" type="Node2D" parent="FondoContainer4/Fondo7"]
+position = Vector2(4996, 816)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer4/Fondo7/Fondo14" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer4/Fondo7/Fondo14" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer4/Fondo7/Fondo14" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer4/Fondo7/Fondo14" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo15" type="Node2D" parent="FondoContainer4/Fondo7"]
+position = Vector2(2498, 816)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer4/Fondo7/Fondo15" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer4/Fondo7/Fondo15" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer4/Fondo7/Fondo15" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer4/Fondo7/Fondo15" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo8" type="Node2D" parent="FondoContainer4"]
+position = Vector2(1249, 816)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer4/Fondo8" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer4/Fondo8" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer4/Fondo8" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer4/Fondo8" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo9" type="Node2D" parent="FondoContainer4"]
+position = Vector2(-1249, 816)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer4/Fondo9" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer4/Fondo9" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer4/Fondo9" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer4/Fondo9" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo10" type="Node2D" parent="FondoContainer4"]
+position = Vector2(3747, 0)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer4/Fondo10" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer4/Fondo10" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer4/Fondo10" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer4/Fondo10" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo11" type="Node2D" parent="FondoContainer4"]
+position = Vector2(4996, 0)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer4/Fondo11" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer4/Fondo11" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer4/Fondo11" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer4/Fondo11" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo12" type="Node2D" parent="FondoContainer4"]
+position = Vector2(2498, 0)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer4/Fondo12" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer4/Fondo12" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer4/Fondo12" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer4/Fondo12" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo13" type="Node2D" parent="FondoContainer4"]
+position = Vector2(3747, 816)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer4/Fondo13" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer4/Fondo13" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer4/Fondo13" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer4/Fondo13" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo14" type="Node2D" parent="FondoContainer4"]
+position = Vector2(4996, 816)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer4/Fondo14" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer4/Fondo14" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer4/Fondo14" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer4/Fondo14" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo15" type="Node2D" parent="FondoContainer4"]
+position = Vector2(2498, 816)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer4/Fondo15" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer4/Fondo15" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer4/Fondo15" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer4/Fondo15" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo16" type="Node2D" parent="FondoContainer4"]
+position = Vector2(3747, -816)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer4/Fondo16" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer4/Fondo16" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer4/Fondo16" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer4/Fondo16" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo17" type="Node2D" parent="FondoContainer4"]
+position = Vector2(4996, -816)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer4/Fondo17" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer4/Fondo17" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer4/Fondo17" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer4/Fondo17" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo18" type="Node2D" parent="FondoContainer4"]
+position = Vector2(2498, -816)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer4/Fondo18" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer4/Fondo18" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer4/Fondo18" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer4/Fondo18" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
 [node name="FondoContainer" type="Node2D" parent="."]
+position = Vector2(7450, 3263)
+metadata/_edit_group_ = true
 
 [node name="Fondo" type="Node2D" parent="FondoContainer"]
 metadata/_edit_group_ = true
@@ -392,15 +784,1156 @@ position = Vector2(1, 377)
 [node name="Fondo4" parent="FondoContainer/Fondo18" instance=ExtResource("1_bhyco")]
 position = Vector2(624, 377)
 
+[node name="FondoContainer3" type="Node2D" parent="."]
+position = Vector2(7450, -3247)
+metadata/_edit_group_ = true
+
+[node name="Fondo" type="Node2D" parent="FondoContainer3"]
+position = Vector2(0, 3247)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer3/Fondo" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer3/Fondo" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer3/Fondo" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer3/Fondo" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo2" type="Node2D" parent="FondoContainer3"]
+position = Vector2(1249, 3247)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer3/Fondo2" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer3/Fondo2" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer3/Fondo2" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer3/Fondo2" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo3" type="Node2D" parent="FondoContainer3"]
+position = Vector2(-1249, 3247)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer3/Fondo3" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer3/Fondo3" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer3/Fondo3" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer3/Fondo3" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo4" type="Node2D" parent="FondoContainer3"]
+position = Vector2(0, 2431)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer3/Fondo4" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer3/Fondo4" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer3/Fondo4" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer3/Fondo4" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo5" type="Node2D" parent="FondoContainer3"]
+position = Vector2(1249, 2431)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer3/Fondo5" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer3/Fondo5" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer3/Fondo5" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer3/Fondo5" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo6" type="Node2D" parent="FondoContainer3"]
+position = Vector2(-1249, 2431)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer3/Fondo6" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer3/Fondo6" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer3/Fondo6" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer3/Fondo6" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo7" type="Node2D" parent="FondoContainer3"]
+position = Vector2(0, 4063)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer3/Fondo7" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer3/Fondo7" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer3/Fondo7" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer3/Fondo7" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo7" type="Node2D" parent="FondoContainer3/Fondo7"]
+position = Vector2(0, 816)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer3/Fondo7/Fondo7" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer3/Fondo7/Fondo7" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer3/Fondo7/Fondo7" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer3/Fondo7/Fondo7" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo8" type="Node2D" parent="FondoContainer3/Fondo7"]
+position = Vector2(1249, 816)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer3/Fondo7/Fondo8" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer3/Fondo7/Fondo8" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer3/Fondo7/Fondo8" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer3/Fondo7/Fondo8" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo9" type="Node2D" parent="FondoContainer3/Fondo7"]
+position = Vector2(-1249, 816)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer3/Fondo7/Fondo9" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer3/Fondo7/Fondo9" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer3/Fondo7/Fondo9" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer3/Fondo7/Fondo9" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo13" type="Node2D" parent="FondoContainer3/Fondo7"]
+position = Vector2(3747, 816)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer3/Fondo7/Fondo13" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer3/Fondo7/Fondo13" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer3/Fondo7/Fondo13" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer3/Fondo7/Fondo13" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo14" type="Node2D" parent="FondoContainer3/Fondo7"]
+position = Vector2(4996, 816)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer3/Fondo7/Fondo14" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer3/Fondo7/Fondo14" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer3/Fondo7/Fondo14" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer3/Fondo7/Fondo14" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo15" type="Node2D" parent="FondoContainer3/Fondo7"]
+position = Vector2(2498, 816)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer3/Fondo7/Fondo15" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer3/Fondo7/Fondo15" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer3/Fondo7/Fondo15" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer3/Fondo7/Fondo15" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo8" type="Node2D" parent="FondoContainer3"]
+position = Vector2(1249, 4063)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer3/Fondo8" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer3/Fondo8" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer3/Fondo8" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer3/Fondo8" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo9" type="Node2D" parent="FondoContainer3"]
+position = Vector2(-1249, 4063)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer3/Fondo9" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer3/Fondo9" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer3/Fondo9" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer3/Fondo9" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo10" type="Node2D" parent="FondoContainer3"]
+position = Vector2(3747, 3247)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer3/Fondo10" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer3/Fondo10" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer3/Fondo10" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer3/Fondo10" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo11" type="Node2D" parent="FondoContainer3"]
+position = Vector2(4996, 3247)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer3/Fondo11" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer3/Fondo11" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer3/Fondo11" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer3/Fondo11" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo12" type="Node2D" parent="FondoContainer3"]
+position = Vector2(2498, 3247)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer3/Fondo12" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer3/Fondo12" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer3/Fondo12" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer3/Fondo12" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo13" type="Node2D" parent="FondoContainer3"]
+position = Vector2(3747, 4063)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer3/Fondo13" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer3/Fondo13" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer3/Fondo13" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer3/Fondo13" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo14" type="Node2D" parent="FondoContainer3"]
+position = Vector2(4996, 4063)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer3/Fondo14" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer3/Fondo14" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer3/Fondo14" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer3/Fondo14" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo15" type="Node2D" parent="FondoContainer3"]
+position = Vector2(2498, 4063)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer3/Fondo15" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer3/Fondo15" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer3/Fondo15" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer3/Fondo15" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo16" type="Node2D" parent="FondoContainer3"]
+position = Vector2(3747, 2431)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer3/Fondo16" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer3/Fondo16" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer3/Fondo16" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer3/Fondo16" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo17" type="Node2D" parent="FondoContainer3"]
+position = Vector2(4996, 2431)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer3/Fondo17" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer3/Fondo17" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer3/Fondo17" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer3/Fondo17" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo18" type="Node2D" parent="FondoContainer3"]
+position = Vector2(2498, 2431)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer3/Fondo18" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer3/Fondo18" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer3/Fondo18" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer3/Fondo18" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="FondoContainer2" type="Node2D" parent="."]
+metadata/_edit_group_ = true
+
+[node name="Fondo" type="Node2D" parent="FondoContainer2"]
+position = Vector2(0, 3247)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer2/Fondo" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer2/Fondo" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer2/Fondo" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer2/Fondo" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo2" type="Node2D" parent="FondoContainer2"]
+position = Vector2(1249, 3247)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer2/Fondo2" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer2/Fondo2" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer2/Fondo2" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer2/Fondo2" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo3" type="Node2D" parent="FondoContainer2"]
+position = Vector2(-1249, 3247)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer2/Fondo3" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer2/Fondo3" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer2/Fondo3" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer2/Fondo3" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo4" type="Node2D" parent="FondoContainer2"]
+position = Vector2(0, 2431)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer2/Fondo4" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer2/Fondo4" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer2/Fondo4" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer2/Fondo4" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo5" type="Node2D" parent="FondoContainer2"]
+position = Vector2(1249, 2431)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer2/Fondo5" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer2/Fondo5" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer2/Fondo5" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer2/Fondo5" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo6" type="Node2D" parent="FondoContainer2"]
+position = Vector2(-1249, 2431)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer2/Fondo6" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer2/Fondo6" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer2/Fondo6" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer2/Fondo6" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo7" type="Node2D" parent="FondoContainer2"]
+position = Vector2(0, 4063)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer2/Fondo7" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer2/Fondo7" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer2/Fondo7" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer2/Fondo7" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo7" type="Node2D" parent="FondoContainer2/Fondo7"]
+position = Vector2(0, 816)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer2/Fondo7/Fondo7" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer2/Fondo7/Fondo7" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer2/Fondo7/Fondo7" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer2/Fondo7/Fondo7" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo8" type="Node2D" parent="FondoContainer2/Fondo7"]
+position = Vector2(1249, 816)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer2/Fondo7/Fondo8" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer2/Fondo7/Fondo8" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer2/Fondo7/Fondo8" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer2/Fondo7/Fondo8" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo9" type="Node2D" parent="FondoContainer2/Fondo7"]
+position = Vector2(-1249, 816)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer2/Fondo7/Fondo9" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer2/Fondo7/Fondo9" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer2/Fondo7/Fondo9" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer2/Fondo7/Fondo9" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo13" type="Node2D" parent="FondoContainer2/Fondo7"]
+position = Vector2(3747, 816)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer2/Fondo7/Fondo13" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer2/Fondo7/Fondo13" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer2/Fondo7/Fondo13" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer2/Fondo7/Fondo13" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo14" type="Node2D" parent="FondoContainer2/Fondo7"]
+position = Vector2(4996, 816)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer2/Fondo7/Fondo14" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer2/Fondo7/Fondo14" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer2/Fondo7/Fondo14" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer2/Fondo7/Fondo14" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo15" type="Node2D" parent="FondoContainer2/Fondo7"]
+position = Vector2(2498, 816)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer2/Fondo7/Fondo15" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer2/Fondo7/Fondo15" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer2/Fondo7/Fondo15" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer2/Fondo7/Fondo15" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo8" type="Node2D" parent="FondoContainer2"]
+position = Vector2(1249, 4063)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer2/Fondo8" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer2/Fondo8" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer2/Fondo8" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer2/Fondo8" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo9" type="Node2D" parent="FondoContainer2"]
+position = Vector2(-1249, 4063)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer2/Fondo9" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer2/Fondo9" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer2/Fondo9" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer2/Fondo9" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo10" type="Node2D" parent="FondoContainer2"]
+position = Vector2(3747, 3247)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer2/Fondo10" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer2/Fondo10" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer2/Fondo10" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer2/Fondo10" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo11" type="Node2D" parent="FondoContainer2"]
+position = Vector2(4996, 3247)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer2/Fondo11" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer2/Fondo11" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer2/Fondo11" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer2/Fondo11" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo12" type="Node2D" parent="FondoContainer2"]
+position = Vector2(2498, 3247)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer2/Fondo12" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer2/Fondo12" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer2/Fondo12" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer2/Fondo12" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo13" type="Node2D" parent="FondoContainer2"]
+position = Vector2(3747, 4063)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer2/Fondo13" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer2/Fondo13" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer2/Fondo13" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer2/Fondo13" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo14" type="Node2D" parent="FondoContainer2"]
+position = Vector2(4996, 4063)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer2/Fondo14" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer2/Fondo14" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer2/Fondo14" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer2/Fondo14" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo15" type="Node2D" parent="FondoContainer2"]
+position = Vector2(2498, 4063)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer2/Fondo15" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer2/Fondo15" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer2/Fondo15" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer2/Fondo15" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo16" type="Node2D" parent="FondoContainer2"]
+position = Vector2(3747, 2431)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer2/Fondo16" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer2/Fondo16" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer2/Fondo16" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer2/Fondo16" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo17" type="Node2D" parent="FondoContainer2"]
+position = Vector2(4996, 2431)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer2/Fondo17" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer2/Fondo17" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer2/Fondo17" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer2/Fondo17" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
+[node name="Fondo18" type="Node2D" parent="FondoContainer2"]
+position = Vector2(2498, 2431)
+metadata/_edit_group_ = true
+
+[node name="Fondo" parent="FondoContainer2/Fondo18" instance=ExtResource("1_bhyco")]
+position = Vector2(1, -22)
+
+[node name="Fondo2" parent="FondoContainer2/Fondo18" instance=ExtResource("1_bhyco")]
+position = Vector2(624, -22)
+
+[node name="Fondo3" parent="FondoContainer2/Fondo18" instance=ExtResource("1_bhyco")]
+position = Vector2(1, 377)
+
+[node name="Fondo4" parent="FondoContainer2/Fondo18" instance=ExtResource("1_bhyco")]
+position = Vector2(624, 377)
+
 [node name="Player" parent="." instance=ExtResource("2_ojry3")]
 position = Vector2(-202, -152)
 
-[node name="Escenario" type="Node2D" parent="."]
-position = Vector2(-333, -238)
+[node name="Escenario4" type="Node2D" parent="."]
+position = Vector2(1977, 3171)
+
+[node name="Dirt_floor" parent="Escenario4" instance=ExtResource("3_nip58")]
+position = Vector2(-1087, 234)
+rotation = 0.0
+
+[node name="Dirt_floor2" parent="Escenario4" instance=ExtResource("3_nip58")]
+position = Vector2(-1428, 233)
+rotation = 0.0
+
+[node name="Dirt_floor3" parent="Escenario4" instance=ExtResource("3_nip58")]
+position = Vector2(-1768, 234)
+rotation = 0.0
+
+[node name="Dirt_floor4" parent="Escenario4" instance=ExtResource("3_nip58")]
+position = Vector2(226, -842)
+rotation = 0.0
+
+[node name="Dirt_floor7" parent="Escenario4" instance=ExtResource("3_nip58")]
+position = Vector2(140, 137)
+rotation = 0.0
+
+[node name="Dirt_floor13" parent="Escenario4" instance=ExtResource("3_nip58")]
+position = Vector2(44, 187)
+rotation = 0.0
+
+[node name="Dirt_floor14" parent="Escenario4" instance=ExtResource("3_nip58")]
+position = Vector2(-50, 237)
+rotation = 0.0
+
+[node name="Dirt_floor5" parent="Escenario4" instance=ExtResource("3_nip58")]
+position = Vector2(-119, -844)
+rotation = 0.0
+
+[node name="Dirt_floor15" parent="Escenario4" instance=ExtResource("3_nip58")]
+position = Vector2(254, 84)
+rotation = 0.0
+
+[node name="Dirt_floor6" parent="Escenario4" instance=ExtResource("3_nip58")]
+position = Vector2(-463, -846)
+rotation = 0.0
+
+[node name="Dirt_floor8" parent="Escenario4" instance=ExtResource("3_nip58")]
+position = Vector2(-395, 235)
+rotation = 0.0
+
+[node name="Dirt_floor16" parent="Escenario4" instance=ExtResource("3_nip58")]
+position = Vector2(379, 38)
+rotation = 0.0
+
+[node name="Dirt_floor17" parent="Escenario4" instance=ExtResource("3_nip58")]
+position = Vector2(482, -12)
+rotation = 0.0
+
+[node name="Dirt_floor9" parent="Escenario4" instance=ExtResource("3_nip58")]
+position = Vector2(-741, 234)
+rotation = 0.0
+
+[node name="Dirt_floor19" parent="Escenario4" instance=ExtResource("3_nip58")]
+position = Vector2(1672, -315)
+rotation = 0.0
+
+[node name="Dirt_floor19" parent="Escenario4/Dirt_floor19" instance=ExtResource("3_nip58")]
+position = Vector2(1110, -42)
+rotation = 0.0
+
+[node name="Dirt_floor19" parent="Escenario4/Dirt_floor19/Dirt_floor19" instance=ExtResource("3_nip58")]
+position = Vector2(1017, 5)
+rotation = 0.0
+
+[node name="Dirt_floor18" parent="Escenario4" instance=ExtResource("3_nip58")]
+position = Vector2(1113, -150)
+rotation = 0.0
+
+[node name="Dirt_floor10" parent="Escenario4" instance=ExtResource("3_nip58")]
+position = Vector2(1262, -841)
+rotation = 0.0
+
+[node name="Dirt_floor10" parent="Escenario4/Dirt_floor10" instance=ExtResource("3_nip58")]
+position = Vector2(1040, -4)
+rotation = 0.0
+
+[node name="Dirt_floor11" parent="Escenario4/Dirt_floor10" instance=ExtResource("3_nip58")]
+position = Vector2(697, -1)
+rotation = 0.0
+
+[node name="Dirt_floor13" parent="Escenario4/Dirt_floor10" instance=ExtResource("3_nip58")]
+position = Vector2(2076, -7)
+rotation = 0.0
+
+[node name="Dirt_floor16" parent="Escenario4/Dirt_floor10" instance=ExtResource("3_nip58")]
+position = Vector2(4135, -12)
+rotation = 0.0
+
+[node name="Dirt_floor17" parent="Escenario4/Dirt_floor10" instance=ExtResource("3_nip58")]
+position = Vector2(3792, -9)
+rotation = 0.0
+
+[node name="Dirt_floor18" parent="Escenario4/Dirt_floor10" instance=ExtResource("3_nip58")]
+position = Vector2(5161, -10)
+rotation = 0.0
+
+[node name="Dirt_floor19" parent="Escenario4/Dirt_floor10" instance=ExtResource("3_nip58")]
+position = Vector2(4818, -7)
+rotation = 0.0
+
+[node name="Dirt_floor20" parent="Escenario4/Dirt_floor10" instance=ExtResource("3_nip58")]
+position = Vector2(4471, -9)
+rotation = 0.0
+
+[node name="Dirt_floor21" parent="Escenario4/Dirt_floor10" instance=ExtResource("3_nip58")]
+position = Vector2(3445, -11)
+rotation = 0.0
+
+[node name="Dirt_floor14" parent="Escenario4/Dirt_floor10" instance=ExtResource("3_nip58")]
+position = Vector2(1733, -4)
+rotation = 0.0
+
+[node name="Dirt_floor15" parent="Escenario4/Dirt_floor10" instance=ExtResource("3_nip58")]
+position = Vector2(3102, -5)
+rotation = 0.0
+
+[node name="Dirt_floor22" parent="Escenario4/Dirt_floor10" instance=ExtResource("3_nip58")]
+position = Vector2(2759, -2)
+rotation = 0.0
+
+[node name="Dirt_floor23" parent="Escenario4/Dirt_floor10" instance=ExtResource("3_nip58")]
+position = Vector2(2412, -4)
+rotation = 0.0
+
+[node name="Dirt_floor24" parent="Escenario4/Dirt_floor10" instance=ExtResource("3_nip58")]
+position = Vector2(1386, -6)
+rotation = 0.0
+
+[node name="Dirt_floor12" parent="Escenario4/Dirt_floor10" instance=ExtResource("3_nip58")]
+position = Vector2(350, -3)
+rotation = 0.0
+
+[node name="Dirt_floor11" parent="Escenario4" instance=ExtResource("3_nip58")]
+position = Vector2(919, -838)
+rotation = 0.0
+
+[node name="Dirt_floor12" parent="Escenario4" instance=ExtResource("3_nip58")]
+position = Vector2(572, -840)
+rotation = 0.0
+
+[node name="Lava_Floor5" parent="Escenario4" instance=ExtResource("6_lejea")]
+position = Vector2(1907, 229)
+
+[node name="Lava_Floor6" parent="Escenario4" instance=ExtResource("6_lejea")]
+position = Vector2(1693, 231)
+
+[node name="Lava_Floor7" parent="Escenario4" instance=ExtResource("6_lejea")]
+position = Vector2(1476, 231)
+
+[node name="Lava_Floor8" parent="Escenario4" instance=ExtResource("6_lejea")]
+position = Vector2(1266, 231)
+
+[node name="Lava_Floor9" parent="Escenario4" instance=ExtResource("6_lejea")]
+position = Vector2(1049, 233)
+
+[node name="Lava_Floor10" parent="Escenario4" instance=ExtResource("6_lejea")]
+position = Vector2(837, 233)
+
+[node name="Lava_Floor12" parent="Escenario4" instance=ExtResource("6_lejea")]
+position = Vector2(403, 235)
+
+[node name="Lava_Floor11" parent="Escenario4" instance=ExtResource("6_lejea")]
+position = Vector2(620, 235)
+
+[node name="Lava_Floor4" parent="Escenario4" instance=ExtResource("6_lejea")]
+position = Vector2(189, 233)
+
+[node name="Lava_Floor5" parent="Escenario4/Lava_Floor4" instance=ExtResource("6_lejea")]
+position = Vector2(3651, -8)
+
+[node name="Lava_Floor6" parent="Escenario4/Lava_Floor4" instance=ExtResource("6_lejea")]
+position = Vector2(3437, -6)
+
+[node name="Lava_Floor7" parent="Escenario4/Lava_Floor4" instance=ExtResource("6_lejea")]
+position = Vector2(3220, -6)
+
+[node name="Lava_Floor8" parent="Escenario4/Lava_Floor4" instance=ExtResource("6_lejea")]
+position = Vector2(3010, -6)
+
+[node name="Lava_Floor9" parent="Escenario4/Lava_Floor4" instance=ExtResource("6_lejea")]
+position = Vector2(2793, -4)
+
+[node name="Lava_Floor10" parent="Escenario4/Lava_Floor4" instance=ExtResource("6_lejea")]
+position = Vector2(2581, -4)
+
+[node name="Lava_Floor12" parent="Escenario4/Lava_Floor4" instance=ExtResource("6_lejea")]
+position = Vector2(2147, -2)
+
+[node name="Lava_Floor11" parent="Escenario4/Lava_Floor4" instance=ExtResource("6_lejea")]
+position = Vector2(2364, -2)
+
+[node name="Lava_Floor4" parent="Escenario4/Lava_Floor4" instance=ExtResource("6_lejea")]
+position = Vector2(1933, -4)
+
+[node name="Lava_Floor14" parent="Escenario4/Lava_Floor4" instance=ExtResource("6_lejea")]
+position = Vector2(5577, -9)
+
+[node name="Lava_Floor15" parent="Escenario4/Lava_Floor4" instance=ExtResource("6_lejea")]
+position = Vector2(5363, -7)
+
+[node name="Lava_Floor16" parent="Escenario4/Lava_Floor4" instance=ExtResource("6_lejea")]
+position = Vector2(5146, -7)
+
+[node name="Lava_Floor17" parent="Escenario4/Lava_Floor4" instance=ExtResource("6_lejea")]
+position = Vector2(4936, -7)
+
+[node name="Lava_Floor18" parent="Escenario4/Lava_Floor4" instance=ExtResource("6_lejea")]
+position = Vector2(4719, -5)
+
+[node name="Lava_Floor19" parent="Escenario4/Lava_Floor4" instance=ExtResource("6_lejea")]
+position = Vector2(4507, -5)
+
+[node name="Lava_Floor20" parent="Escenario4/Lava_Floor4" instance=ExtResource("6_lejea")]
+position = Vector2(4073, -3)
+
+[node name="Lava_Floor21" parent="Escenario4/Lava_Floor4" instance=ExtResource("6_lejea")]
+position = Vector2(4290, -3)
+
+[node name="Lava_Floor22" parent="Escenario4/Lava_Floor4" instance=ExtResource("6_lejea")]
+position = Vector2(3859, -5)
+
+[node name="Lava_Floor13" parent="Escenario4/Lava_Floor4" instance=ExtResource("6_lejea")]
+position = Vector2(1926, -1)
+
+[node name="Jump_Pad2" parent="Escenario4" instance=ExtResource("3_1h4nb")]
+position = Vector2(614, -70)
+
+[node name="Dirt_floor22" parent="Escenario4" instance=ExtResource("6_3s5i0")]
+position = Vector2(3789, 165)
+
+[node name="Dirt_floor23" parent="Escenario4" instance=ExtResource("6_3s5i0")]
+position = Vector2(3211, 172)
+
+[node name="Dirt_floor21" parent="Escenario4" instance=ExtResource("6_3s5i0")]
+position = Vector2(2721, 170)
+
+[node name="Dirt_floor20" parent="Escenario4" instance=ExtResource("6_3s5i0")]
+position = Vector2(2128, 171)
+
+[node name="Escenario3" type="Node2D" parent="."]
+position = Vector2(1907, -483)
 metadata/_edit_group_ = true
 
-[node name="Grass_floor" parent="Escenario" instance=ExtResource("3_860y0")]
-position = Vector2(230, 141)
+[node name="Dirt_floor" parent="Escenario3" instance=ExtResource("3_nip58")]
+position = Vector2(-1159, 804)
+rotation = 0.0
+
+[node name="Dirt_floor2" parent="Escenario3" instance=ExtResource("3_nip58")]
+position = Vector2(-1390, 720)
+rotation = 0.0
+
+[node name="Dirt_floor3" parent="Escenario3" instance=ExtResource("3_nip58")]
+position = Vector2(-1681, 649)
+rotation = 0.0
+
+[node name="Escenario2" type="Node2D" parent="."]
+position = Vector2(949, -229)
+metadata/_edit_group_ = true
+
+[node name="Grass_floor" parent="Escenario2" instance=ExtResource("3_860y0")]
+position = Vector2(501, 126)
+
+[node name="Dirt_floor" parent="Escenario2" instance=ExtResource("3_nip58")]
+position = Vector2(353, 673)
+rotation = -1.5708
+
+[node name="Dirt_floor4" parent="Escenario2" instance=ExtResource("3_nip58")]
+position = Vector2(353, 341)
+rotation = -1.5708
+
+[node name="Dirt_floor2" parent="Escenario2" instance=ExtResource("3_nip58")]
+position = Vector2(354, 1011)
+rotation = -1.5708
+
+[node name="Dirt_floor10" parent="Escenario2" instance=ExtResource("3_nip58")]
+position = Vector2(360, 3039)
+rotation = -1.5708
+
+[node name="Dirt_floor3" parent="Escenario2" instance=ExtResource("3_nip58")]
+position = Vector2(354, 1354)
+rotation = -1.5708
+
+[node name="Dirt_floor5" parent="Escenario2" instance=ExtResource("3_nip58")]
+position = Vector2(355, 1697)
+rotation = -1.5708
+
+[node name="Dirt_floor6" parent="Escenario2" instance=ExtResource("3_nip58")]
+position = Vector2(-72, 2165)
+rotation = 3.14159
+
+[node name="Dirt_floor7" parent="Escenario2" instance=ExtResource("3_nip58")]
+position = Vector2(358, 2036)
+rotation = -1.5708
+
+[node name="Dirt_floor8" parent="Escenario2" instance=ExtResource("3_nip58")]
+position = Vector2(360, 2375)
+rotation = -1.5708
+
+[node name="Dirt_floor9" parent="Escenario2" instance=ExtResource("3_nip58")]
+position = Vector2(359, 2706)
+rotation = -1.5708
+
+[node name="Escenario" type="Node2D" parent="."]
+position = Vector2(-315, -185)
+metadata/_edit_group_ = true
 
 [node name="Grass_floor2" parent="Escenario" instance=ExtResource("3_860y0")]
-position = Vector2(950, 143)
+position = Vector2(238, 109)
+
+[node name="Jump_Pad" parent="Escenario" instance=ExtResource("3_1h4nb")]
+position = Vector2(1352, 913)
+
+[node name="Dirt_floor" parent="Escenario" instance=ExtResource("3_nip58")]
+position = Vector2(353, 692)
+
+[node name="Dirt_floor4" parent="Escenario" instance=ExtResource("3_nip58")]
+position = Vector2(353, 353)
+
+[node name="Dirt_floor2" parent="Escenario" instance=ExtResource("3_nip58")]
+position = Vector2(354, 1013)
+
+[node name="Dirt_floor3" parent="Escenario" instance=ExtResource("3_nip58")]
+position = Vector2(356, 1356)
+
+[node name="Dirt_floor5" parent="Escenario" instance=ExtResource("3_nip58")]
+position = Vector2(356, 1659)
+
+[node name="Jump_Pad2" parent="Escenario" instance=ExtResource("3_1h4nb")]
+position = Vector2(1027, 925)
+
+[node name="Lava_Floor4" parent="Escenario" instance=ExtResource("6_lejea")]
+position = Vector2(503, 2282)
+
+[node name="Lava_Floor3" parent="Escenario" instance=ExtResource("6_lejea")]
+position = Vector2(1383, 1839)
+
+[node name="Lava_Floor2" parent="Escenario" instance=ExtResource("6_lejea")]
+position = Vector2(997, 1724)
+
+[node name="Lava_Floor" parent="Escenario" instance=ExtResource("6_lejea")]
+position = Vector2(572, 1012)
+
+[node name="Jump_Pad4" parent="Escenario" instance=ExtResource("3_1h4nb")]
+position = Vector2(754, 2578)
+
+[node name="Jump_Pad3" parent="Escenario" instance=ExtResource("3_1h4nb")]
+position = Vector2(866, 1538)
+
+[node name="Grass_floor4" parent="Escenario" instance=ExtResource("3_860y0")]
+position = Vector2(781, 2999)
+
+[node name="Grass_floor3" parent="Escenario" instance=ExtResource("3_860y0")]
+position = Vector2(628, 1192)
+
+[node name="Dirt_floor6" parent="Escenario" instance=ExtResource("3_nip58")]
+position = Vector2(358, 2011)
+
+[node name="Dirt_floor7" parent="Escenario" instance=ExtResource("3_nip58")]
+position = Vector2(360, 2364)
+
+[node name="Dirt_floor10" parent="Escenario" instance=ExtResource("3_nip58")]
+position = Vector2(367, 3378)
+
+[node name="Dirt_floor8" parent="Escenario" instance=ExtResource("3_nip58")]
+position = Vector2(362, 2714)
+
+[node name="Dirt_floor9" parent="Escenario" instance=ExtResource("3_nip58")]
+position = Vector2(365, 3043)

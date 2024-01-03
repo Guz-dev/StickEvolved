@@ -28,6 +28,7 @@ size = Vector2(82, 26)
 size = Vector2(80, 24)
 
 [node name="Jump_Pad" type="RigidBody2D"]
+gravity_scale = 0.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_brhop")

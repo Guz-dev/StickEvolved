@@ -22,19 +22,20 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jo52s"]
-size = Vector2(117, 21.25)
+size = Vector2(106, 21.25)
 
 [node name="Grass_floor" type="RigidBody2D"]
 gravity_scale = 0.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(3, 2)
+position = Vector2(-12.5, 0)
+scale = Vector2(2.80469, 2)
 sprite_frames = SubResource("SpriteFrames_md5pe")
 autoplay = "default"
 frame = 1
 frame_progress = 0.325789
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1.5, 3.25)
+position = Vector2(-18, 3.25)
 scale = Vector2(3, 2)
 shape = SubResource("RectangleShape2D_jo52s")
