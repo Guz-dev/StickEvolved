@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://du81mri8uddpp"]
+[gd_scene load_steps=13 format=3 uid="uid://du81mri8uddpp"]
 
 [ext_resource type="PackedScene" uid="uid://cqfsi6hjn6jeh" path="res://Assets/Scenes/Components/fondo.tscn" id="1_bhyco"]
 [ext_resource type="PackedScene" uid="uid://b3002vtpmopu6" path="res://Assets/Scenes/Components/Characters/player.tscn" id="2_ojry3"]
@@ -11,6 +11,10 @@
 [ext_resource type="PackedScene" uid="uid://c6dnbssxerqqg" path="res://Assets/Scenes/Components/Scenario/dirt_floor.tscn" id="9_yudnp"]
 [ext_resource type="PackedScene" uid="uid://bw0kv1qqnloed" path="res://Assets/Scenes/Components/Scenario/spike.tscn" id="10_qanwc"]
 [ext_resource type="AudioStream" uid="uid://kngcyij0ae3x" path="res://Assets/Sounds/music.mp3" id="11_mbcis"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_56fi6"]
+font_size = 151
+font_color = Color(0, 0, 0, 1)
 
 [node name="main" type="Node2D"]
 position = Vector2(384.938, 192.696)
@@ -1569,18 +1573,6 @@ position = Vector2(-202, -152)
 [node name="Escenario4" type="Node2D" parent="."]
 position = Vector2(1977, 3171)
 
-[node name="Dirt_floor" parent="Escenario4" instance=ExtResource("3_nip58")]
-position = Vector2(-1087, 234)
-rotation = 0.0
-
-[node name="Dirt_floor2" parent="Escenario4" instance=ExtResource("3_nip58")]
-position = Vector2(-1428, 233)
-rotation = 0.0
-
-[node name="Dirt_floor3" parent="Escenario4" instance=ExtResource("3_nip58")]
-position = Vector2(-1768, 234)
-rotation = 0.0
-
 [node name="Dirt_floor4" parent="Escenario4" instance=ExtResource("3_nip58")]
 position = Vector2(226, -842)
 rotation = 0.0
@@ -1621,10 +1613,6 @@ rotation = 0.0
 position = Vector2(482, -12)
 rotation = 0.0
 
-[node name="Dirt_floor9" parent="Escenario4" instance=ExtResource("3_nip58")]
-position = Vector2(-741, 234)
-rotation = 0.0
-
 [node name="Dirt_floor19" parent="Escenario4" instance=ExtResource("3_nip58")]
 position = Vector2(1590.06, -89.696)
 rotation = 0.0
@@ -1658,15 +1646,11 @@ position = Vector2(2076, -7)
 rotation = 0.0
 
 [node name="Dirt_floor16" parent="Escenario4/Dirt_floor10" instance=ExtResource("3_nip58")]
-position = Vector2(4135, -12)
+position = Vector2(4129.06, -9.69604)
 rotation = 0.0
 
 [node name="Dirt_floor17" parent="Escenario4/Dirt_floor10" instance=ExtResource("3_nip58")]
 position = Vector2(3792, -9)
-rotation = 0.0
-
-[node name="Dirt_floor20" parent="Escenario4/Dirt_floor10" instance=ExtResource("3_nip58")]
-position = Vector2(3960, 1074)
 rotation = 0.0
 
 [node name="Dirt_floor21" parent="Escenario4/Dirt_floor10" instance=ExtResource("3_nip58")]
@@ -1887,11 +1871,8 @@ position = Vector2(830, 2256)
 [node name="Jump_Pad3" parent="Escenario" instance=ExtResource("3_1h4nb")]
 position = Vector2(975, 1342)
 
-[node name="Grass_floor4" parent="Escenario" instance=ExtResource("3_860y0")]
-position = Vector2(836, 2888)
-
 [node name="Grass_floor3" parent="Escenario" instance=ExtResource("3_860y0")]
-position = Vector2(594, 1173)
+position = Vector2(569.062, 1173.3)
 
 [node name="Dirt_floor6" parent="Escenario" instance=ExtResource("3_nip58")]
 position = Vector2(358, 2011)
@@ -1909,7 +1890,7 @@ position = Vector2(362, 2714)
 position = Vector2(365, 3043)
 
 [node name="Checkpoint" parent="." instance=ExtResource("8_myu7u")]
-position = Vector2(1256, 3089)
+position = Vector2(1252.06, 3097.3)
 
 [node name="Checkpoint2" parent="." instance=ExtResource("8_myu7u")]
 position = Vector2(7296, 3144)
@@ -1931,7 +1912,7 @@ position = Vector2(1188, 466)
 scale = Vector2(0.555, 1)
 
 [node name="Dirt_floor5" parent="." instance=ExtResource("9_yudnp")]
-position = Vector2(1106, 1311)
+position = Vector2(1106.06, 1274.3)
 
 [node name="Jump_Pad" parent="." instance=ExtResource("3_1h4nb")]
 position = Vector2(561, 1605)
@@ -1961,7 +1942,7 @@ position = Vector2(503, 3351)
 position = Vector2(70.0623, -308.696)
 
 [node name="Dirt_floor6" parent="." instance=ExtResource("9_yudnp")]
-position = Vector2(1065, 3360)
+position = Vector2(1032.06, 3358.3)
 
 [node name="Jump_Pad10" parent="." instance=ExtResource("3_1h4nb")]
 position = Vector2(3128, 3015)
@@ -1982,10 +1963,10 @@ position = Vector2(8087, 2569)
 position = Vector2(7792, 2975)
 
 [node name="Dirt_wall5" parent="." instance=ExtResource("3_nip58")]
-position = Vector2(7525, 2516)
+position = Vector2(7524.06, 2478.3)
 
 [node name="Jump_Pad12" parent="." instance=ExtResource("3_1h4nb")]
-position = Vector2(7724, 2814)
+position = Vector2(7710.06, 2777.3)
 
 [node name="Grass_floor" parent="." instance=ExtResource("3_860y0")]
 position = Vector2(-401.312, -76.554)
@@ -2039,13 +2020,13 @@ position = Vector2(7977.06, 2244.3)
 position = Vector2(7929.06, 2032.3)
 
 [node name="Dirt_wall11" parent="." instance=ExtResource("3_nip58")]
-position = Vector2(7571.06, 1818.3)
+position = Vector2(7551.06, 1810.3)
 
 [node name="Dirt_wall12" parent="." instance=ExtResource("3_nip58")]
 position = Vector2(7907.06, 1714.3)
 
 [node name="Dirt_wall13" parent="." instance=ExtResource("3_nip58")]
-position = Vector2(7623.06, 1502.3)
+position = Vector2(7582.06, 1482.3)
 
 [node name="Dirt_floor7" parent="." instance=ExtResource("9_yudnp")]
 position = Vector2(8115.06, 1562.3)
@@ -2054,4 +2035,42 @@ position = Vector2(8115.06, 1562.3)
 position = Vector2(8457.06, 1564.3)
 
 [node name="Checkpoint4" parent="." instance=ExtResource("8_myu7u")]
-position = Vector2(8617.06, 1338.3)
+position = Vector2(8612.06, 1314.3)
+
+[node name="Dirt_floor9" parent="." instance=ExtResource("9_yudnp")]
+position = Vector2(7197.06, 3404.3)
+
+[node name="Dirt_floor10" parent="." instance=ExtResource("9_yudnp")]
+position = Vector2(506.062, 2717.3)
+
+[node name="Dirt_floor11" parent="." instance=ExtResource("9_yudnp")]
+position = Vector2(193.062, 3406.3)
+
+[node name="Dirt_floor12" parent="." instance=ExtResource("9_yudnp")]
+position = Vector2(536.062, 3407.3)
+
+[node name="Dirt_floor13" parent="." instance=ExtResource("9_yudnp")]
+position = Vector2(877.062, 3407.3)
+
+[node name="Dirt_floor14" parent="." instance=ExtResource("9_yudnp")]
+position = Vector2(1233.06, 3406.3)
+
+[node name="Dirt_floor15" parent="." instance=ExtResource("9_yudnp")]
+position = Vector2(8802.06, 1563.3)
+
+[node name="Dirt_floor16" parent="." instance=ExtResource("9_yudnp")]
+position = Vector2(9145.06, 1560.3)
+
+[node name="Dirt_floor17" parent="." instance=ExtResource("9_yudnp")]
+position = Vector2(9488.06, 1557.3)
+
+[node name="Dirt_floor18" parent="." instance=ExtResource("9_yudnp")]
+position = Vector2(9833.06, 1555.3)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 8997.06
+offset_top = 1228.3
+offset_right = 9962.06
+offset_bottom = 1435.3
+text = "Fin del Juego!"
+label_settings = SubResource("LabelSettings_56fi6")

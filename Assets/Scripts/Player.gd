@@ -3,9 +3,10 @@ class_name Player
 
 const SPEED =  300.0
 const JUMP_VELOCITY = -500.0
-
+const FALL_LIMIT = 300
 var idle = "idle"
 var movement = "movement"
+var jump_site = 0.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -20,6 +21,9 @@ func _ready():
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
+		if jump_site == 0:
+			jump_site = position.y
+		#print("Jump site ", jump_site)
 		velocity.y += gravity * delta
 		
 	# Get the input direction and handle the movement/deceleration.
@@ -37,6 +41,7 @@ func _physics_process(delta):
 	# Handle jump.
 	if legs:
 		if Input.is_action_just_pressed("ui_accept") and (is_on_floor() or grab):
+			jump_site = 0.0
 			velocity.y = JUMP_VELOCITY
 			if grab:
 				if direction:
@@ -44,7 +49,13 @@ func _physics_process(delta):
 					
 				else:
 					velocity.x = move_toward(velocity.x, 0, SPEED)
-				
+	
+	if is_on_floor() && jump_site != 0:
+		#print("y:",position.y)
+		if abs(position.y - jump_site) > FALL_LIMIT:
+			die()
+		else:
+			jump_site = 0.0
 	decide_animation()
 	move_and_slide()
 
@@ -78,5 +89,6 @@ func change_animation():
 		movement = "movementp3"
 
 func die():
+	jump_site = 0.0
 	$AudioStreamPlayer2D.play()
 	GameManager.respawn_player()
