@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://du81mri8uddpp"]
+[gd_scene load_steps=12 format=3 uid="uid://du81mri8uddpp"]
 
 [ext_resource type="PackedScene" uid="uid://cqfsi6hjn6jeh" path="res://Assets/Scenes/Components/fondo.tscn" id="1_bhyco"]
 [ext_resource type="PackedScene" uid="uid://b3002vtpmopu6" path="res://Assets/Scenes/Components/Characters/player.tscn" id="2_ojry3"]
@@ -7,9 +7,13 @@
 [ext_resource type="PackedScene" uid="uid://ow1ajturcx8e" path="res://Assets/Scenes/Components/Scenario/dirt_wall.tscn" id="3_nip58"]
 [ext_resource type="PackedScene" uid="uid://b2wfxtvii2q7t" path="res://Assets/Scenes/Components/Scenario/spine_dirt.tscn" id="6_3s5i0"]
 [ext_resource type="PackedScene" uid="uid://dpv0hn418trsc" path="res://Assets/Scenes/Components/Scenario/lava_floor.tscn" id="6_lejea"]
+[ext_resource type="PackedScene" uid="uid://cqckqqrnmlhto" path="res://Assets/Scenes/Components/Scenario/checkpoint.tscn" id="8_myu7u"]
+[ext_resource type="PackedScene" uid="uid://c6dnbssxerqqg" path="res://Assets/Scenes/Components/Scenario/dirt_floor.tscn" id="9_yudnp"]
+[ext_resource type="PackedScene" uid="uid://bw0kv1qqnloed" path="res://Assets/Scenes/Components/Scenario/spike.tscn" id="10_qanwc"]
+[ext_resource type="AudioStream" uid="uid://kngcyij0ae3x" path="res://Assets/Sounds/music.mp3" id="11_mbcis"]
 
 [node name="main" type="Node2D"]
-position = Vector2(315, 233)
+position = Vector2(384.938, 192.696)
 
 [node name="FondoContainer4" type="Node2D" parent="."]
 metadata/_edit_group_ = true
@@ -1622,19 +1626,19 @@ position = Vector2(-741, 234)
 rotation = 0.0
 
 [node name="Dirt_floor19" parent="Escenario4" instance=ExtResource("3_nip58")]
-position = Vector2(1672, -315)
+position = Vector2(1590.06, -89.696)
 rotation = 0.0
 
 [node name="Dirt_floor19" parent="Escenario4/Dirt_floor19" instance=ExtResource("3_nip58")]
-position = Vector2(1110, -42)
+position = Vector2(833, 149)
 rotation = 0.0
 
 [node name="Dirt_floor19" parent="Escenario4/Dirt_floor19/Dirt_floor19" instance=ExtResource("3_nip58")]
-position = Vector2(1017, 5)
+position = Vector2(1041.94, -13.304)
 rotation = 0.0
 
 [node name="Dirt_floor18" parent="Escenario4" instance=ExtResource("3_nip58")]
-position = Vector2(1113, -150)
+position = Vector2(1012, -102)
 rotation = 0.0
 
 [node name="Dirt_floor10" parent="Escenario4" instance=ExtResource("3_nip58")]
@@ -1661,16 +1665,8 @@ rotation = 0.0
 position = Vector2(3792, -9)
 rotation = 0.0
 
-[node name="Dirt_floor18" parent="Escenario4/Dirt_floor10" instance=ExtResource("3_nip58")]
-position = Vector2(5161, -10)
-rotation = 0.0
-
-[node name="Dirt_floor19" parent="Escenario4/Dirt_floor10" instance=ExtResource("3_nip58")]
-position = Vector2(4818, -7)
-rotation = 0.0
-
 [node name="Dirt_floor20" parent="Escenario4/Dirt_floor10" instance=ExtResource("3_nip58")]
-position = Vector2(4471, -9)
+position = Vector2(3960, 1074)
 rotation = 0.0
 
 [node name="Dirt_floor21" parent="Escenario4/Dirt_floor10" instance=ExtResource("3_nip58")]
@@ -1763,18 +1759,6 @@ position = Vector2(2364, -2)
 [node name="Lava_Floor4" parent="Escenario4/Lava_Floor4" instance=ExtResource("6_lejea")]
 position = Vector2(1933, -4)
 
-[node name="Lava_Floor14" parent="Escenario4/Lava_Floor4" instance=ExtResource("6_lejea")]
-position = Vector2(5577, -9)
-
-[node name="Lava_Floor15" parent="Escenario4/Lava_Floor4" instance=ExtResource("6_lejea")]
-position = Vector2(5363, -7)
-
-[node name="Lava_Floor16" parent="Escenario4/Lava_Floor4" instance=ExtResource("6_lejea")]
-position = Vector2(5146, -7)
-
-[node name="Lava_Floor17" parent="Escenario4/Lava_Floor4" instance=ExtResource("6_lejea")]
-position = Vector2(4936, -7)
-
 [node name="Lava_Floor18" parent="Escenario4/Lava_Floor4" instance=ExtResource("6_lejea")]
 position = Vector2(4719, -5)
 
@@ -1826,7 +1810,6 @@ rotation = 0.0
 
 [node name="Escenario2" type="Node2D" parent="."]
 position = Vector2(949, -229)
-metadata/_edit_group_ = true
 
 [node name="Grass_floor" parent="Escenario2" instance=ExtResource("3_860y0")]
 position = Vector2(501, 126)
@@ -1856,7 +1839,7 @@ position = Vector2(355, 1697)
 rotation = -1.5708
 
 [node name="Dirt_floor6" parent="Escenario2" instance=ExtResource("3_nip58")]
-position = Vector2(-72, 2165)
+position = Vector2(-720, 2038)
 rotation = 3.14159
 
 [node name="Dirt_floor7" parent="Escenario2" instance=ExtResource("3_nip58")]
@@ -1873,13 +1856,12 @@ rotation = -1.5708
 
 [node name="Escenario" type="Node2D" parent="."]
 position = Vector2(-315, -185)
-metadata/_edit_group_ = true
 
 [node name="Grass_floor2" parent="Escenario" instance=ExtResource("3_860y0")]
 position = Vector2(238, 109)
 
 [node name="Jump_Pad" parent="Escenario" instance=ExtResource("3_1h4nb")]
-position = Vector2(1352, 913)
+position = Vector2(1200, 913)
 
 [node name="Dirt_floor" parent="Escenario" instance=ExtResource("3_nip58")]
 position = Vector2(353, 692)
@@ -1897,31 +1879,19 @@ position = Vector2(356, 1356)
 position = Vector2(356, 1659)
 
 [node name="Jump_Pad2" parent="Escenario" instance=ExtResource("3_1h4nb")]
-position = Vector2(1027, 925)
-
-[node name="Lava_Floor4" parent="Escenario" instance=ExtResource("6_lejea")]
-position = Vector2(503, 2282)
-
-[node name="Lava_Floor3" parent="Escenario" instance=ExtResource("6_lejea")]
-position = Vector2(1383, 1839)
-
-[node name="Lava_Floor2" parent="Escenario" instance=ExtResource("6_lejea")]
-position = Vector2(997, 1724)
-
-[node name="Lava_Floor" parent="Escenario" instance=ExtResource("6_lejea")]
-position = Vector2(572, 1012)
+position = Vector2(922, 939)
 
 [node name="Jump_Pad4" parent="Escenario" instance=ExtResource("3_1h4nb")]
-position = Vector2(754, 2578)
+position = Vector2(830, 2256)
 
 [node name="Jump_Pad3" parent="Escenario" instance=ExtResource("3_1h4nb")]
-position = Vector2(866, 1538)
+position = Vector2(975, 1342)
 
 [node name="Grass_floor4" parent="Escenario" instance=ExtResource("3_860y0")]
-position = Vector2(781, 2999)
+position = Vector2(836, 2888)
 
 [node name="Grass_floor3" parent="Escenario" instance=ExtResource("3_860y0")]
-position = Vector2(628, 1192)
+position = Vector2(594, 1173)
 
 [node name="Dirt_floor6" parent="Escenario" instance=ExtResource("3_nip58")]
 position = Vector2(358, 2011)
@@ -1937,3 +1907,151 @@ position = Vector2(362, 2714)
 
 [node name="Dirt_floor9" parent="Escenario" instance=ExtResource("3_nip58")]
 position = Vector2(365, 3043)
+
+[node name="Checkpoint" parent="." instance=ExtResource("8_myu7u")]
+position = Vector2(1256, 3089)
+
+[node name="Checkpoint2" parent="." instance=ExtResource("8_myu7u")]
+position = Vector2(7296, 3144)
+
+[node name="Dirt_floor" parent="." instance=ExtResource("9_yudnp")]
+position = Vector2(7542, 3404)
+
+[node name="Dirt_floor2" parent="." instance=ExtResource("9_yudnp")]
+position = Vector2(7886, 3403)
+
+[node name="Dirt_floor3" parent="." instance=ExtResource("9_yudnp")]
+position = Vector2(6054.06, 3213.3)
+
+[node name="Jump_Pad2" parent="." instance=ExtResource("3_1h4nb")]
+position = Vector2(6640.06, 3010.3)
+
+[node name="Dirt_floor4" parent="." instance=ExtResource("9_yudnp")]
+position = Vector2(1188, 466)
+scale = Vector2(0.555, 1)
+
+[node name="Dirt_floor5" parent="." instance=ExtResource("9_yudnp")]
+position = Vector2(1106, 1311)
+
+[node name="Jump_Pad" parent="." instance=ExtResource("3_1h4nb")]
+position = Vector2(561, 1605)
+
+[node name="Jump_Pad3" parent="." instance=ExtResource("3_1h4nb")]
+position = Vector2(801, 1454)
+
+[node name="Jump_Pad4" parent="." instance=ExtResource("3_1h4nb")]
+position = Vector2(706, 2254)
+
+[node name="Jump_Pad5" parent="." instance=ExtResource("3_1h4nb")]
+position = Vector2(1009, 2387)
+
+[node name="Jump_Pad6" parent="." instance=ExtResource("3_1h4nb")]
+position = Vector2(777, 2550)
+
+[node name="Jump_Pad7" parent="." instance=ExtResource("3_1h4nb")]
+position = Vector2(113, 2978)
+
+[node name="Jump_Pad8" parent="." instance=ExtResource("3_1h4nb")]
+position = Vector2(280, 3178)
+
+[node name="Jump_Pad9" parent="." instance=ExtResource("3_1h4nb")]
+position = Vector2(503, 3351)
+
+[node name="Checkpoint3" parent="." instance=ExtResource("8_myu7u")]
+position = Vector2(70.0623, -308.696)
+
+[node name="Dirt_floor6" parent="." instance=ExtResource("9_yudnp")]
+position = Vector2(1065, 3360)
+
+[node name="Jump_Pad10" parent="." instance=ExtResource("3_1h4nb")]
+position = Vector2(3128, 3015)
+
+[node name="Jump_Pad11" parent="." instance=ExtResource("3_1h4nb")]
+position = Vector2(3689.06, 3020.3)
+
+[node name="Dirt_wall" parent="." instance=ExtResource("3_nip58")]
+position = Vector2(8087, 3252)
+
+[node name="Dirt_wall2" parent="." instance=ExtResource("3_nip58")]
+position = Vector2(8087, 2912)
+
+[node name="Dirt_wall3" parent="." instance=ExtResource("3_nip58")]
+position = Vector2(8087, 2569)
+
+[node name="Dirt_wall4" parent="." instance=ExtResource("3_nip58")]
+position = Vector2(7792, 2975)
+
+[node name="Dirt_wall5" parent="." instance=ExtResource("3_nip58")]
+position = Vector2(7525, 2516)
+
+[node name="Jump_Pad12" parent="." instance=ExtResource("3_1h4nb")]
+position = Vector2(7724, 2814)
+
+[node name="Grass_floor" parent="." instance=ExtResource("3_860y0")]
+position = Vector2(-401.312, -76.554)
+
+[node name="Dirt_wall6" parent="." instance=ExtResource("3_nip58")]
+position = Vector2(-611.312, -241.554)
+
+[node name="Jump_Pad13" parent="." instance=ExtResource("3_1h4nb")]
+position = Vector2(4939.06, 3353.3)
+
+[node name="Jump_Pad14" parent="." instance=ExtResource("3_1h4nb")]
+position = Vector2(5573.06, 3166.3)
+
+[node name="Jump_Pad15" parent="." instance=ExtResource("3_1h4nb")]
+position = Vector2(6175.06, 3164.3)
+
+[node name="Jump_Pad16" parent="." instance=ExtResource("3_1h4nb")]
+position = Vector2(6422.06, 3094.3)
+
+[node name="Spike" parent="." instance=ExtResource("10_qanwc")]
+position = Vector2(2932.06, 3026.3)
+
+[node name="Spike2" parent="." instance=ExtResource("10_qanwc")]
+position = Vector2(3507.06, 3036.3)
+
+[node name="Spike3" parent="." instance=ExtResource("10_qanwc")]
+position = Vector2(4352.06, 3189.3)
+
+[node name="Spike4" parent="." instance=ExtResource("10_qanwc")]
+position = Vector2(5362.06, 3170.3)
+
+[node name="Spike5" parent="." instance=ExtResource("10_qanwc")]
+position = Vector2(6025.06, 3174.3)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_mbcis")
+volume_db = -15.661
+pitch_scale = 0.75
+autoplay = true
+
+[node name="Dirt_wall7" parent="." instance=ExtResource("3_nip58")]
+position = Vector2(7525.06, 2138.3)
+
+[node name="Dirt_wall8" parent="." instance=ExtResource("3_nip58")]
+position = Vector2(8027.06, 2334.3)
+
+[node name="Dirt_wall9" parent="." instance=ExtResource("3_nip58")]
+position = Vector2(7977.06, 2244.3)
+
+[node name="Dirt_wall10" parent="." instance=ExtResource("3_nip58")]
+position = Vector2(7929.06, 2032.3)
+
+[node name="Dirt_wall11" parent="." instance=ExtResource("3_nip58")]
+position = Vector2(7571.06, 1818.3)
+
+[node name="Dirt_wall12" parent="." instance=ExtResource("3_nip58")]
+position = Vector2(7907.06, 1714.3)
+
+[node name="Dirt_wall13" parent="." instance=ExtResource("3_nip58")]
+position = Vector2(7623.06, 1502.3)
+
+[node name="Dirt_floor7" parent="." instance=ExtResource("9_yudnp")]
+position = Vector2(8115.06, 1562.3)
+
+[node name="Dirt_floor8" parent="." instance=ExtResource("9_yudnp")]
+position = Vector2(8457.06, 1564.3)
+
+[node name="Checkpoint4" parent="." instance=ExtResource("8_myu7u")]
+position = Vector2(8617.06, 1338.3)

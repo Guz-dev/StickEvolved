@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://b3002vtpmopu6"]
+[gd_scene load_steps=5 format=3 uid="uid://b3002vtpmopu6"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/Player.gd" id="1_26lp2"]
 [ext_resource type="SpriteFrames" uid="uid://kkemophe5cnf" path="res://Assets/Sprites/Player/Animations/movePlayer.tres" id="1_237to"]
+[ext_resource type="AudioStream" uid="uid://dq3skfalmoakl" path="res://Assets/Sounds/erasing.mp3" id="3_b741d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6vif5"]
+size = Vector2(32, 114)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_26lp2")
@@ -9,10 +13,42 @@ metadata/_edit_group_ = true
 
 [node name="animaciones" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("1_237to")
-animation = &"idle"
+animation = &"grab"
 autoplay = "idle"
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+[node name="colisionp1" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, -5.80833)
+scale = Vector2(1, 1.17708)
 polygon = PackedVector2Array(-61, 13, 21, 14, 38, 22, 54, 10, 53, -5, 38, -14, 25, -6, 21, 2, -60, 1)
 
+[node name="areap1" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="areap1"]
+position = Vector2(0, -12.6452)
+scale = Vector2(1, 1.38553)
+polygon = PackedVector2Array(-61, 13, 21, 14, 38, 22, 54, 10, 53, -5, 38, -14, 25, -6, 21, 2, -60, 1)
+
+[node name="colisionp2" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_6vif5")
+disabled = true
+
+[node name="areap2" type="Area2D" parent="."]
+
+[node name="colisionp2" type="CollisionShape2D" parent="areap2"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_6vif5")
+disabled = true
+
+[node name="areap2" type="Area2D" parent="areap2"]
+
+[node name="colisionp2" type="CollisionShape2D" parent="areap2/areap2"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_6vif5")
+disabled = true
+
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.8, 0.8)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_b741d")

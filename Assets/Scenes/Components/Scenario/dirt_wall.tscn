@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://ow1ajturcx8e"]
+[gd_scene load_steps=5 format=3 uid="uid://ow1ajturcx8e"]
 
 [ext_resource type="Texture2D" uid="uid://c3kvgy31um4f5" path="res://Assets/Sprites/Scenario/Structures/dirt/piso_tierra.png" id="1_mntpc"]
+[ext_resource type="Script" path="res://Assets/Scripts/dirt_wall.gd" id="1_taimn"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_md5pe"]
 animations = [{
@@ -14,11 +15,12 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jo52s"]
-size = Vector2(114.333, 21.25)
+size = Vector2(37.8889, 10.7503)
 
-[node name="Dirt_floor" type="RigidBody2D"]
+[node name="Dirt_wall" type="RigidBody2D"]
 rotation = 1.5708
 gravity_scale = 0.0
+script = ExtResource("1_taimn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(3, 2)
@@ -27,6 +29,22 @@ autoplay = "default"
 frame_progress = 0.325789
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2.5, 3.25)
-scale = Vector2(3, 2)
+position = Vector2(-3.50001, 1.50001)
+scale = Vector2(9, 4)
 shape = SubResource("RectangleShape2D_jo52s")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-3.00005, -14)
+scale = Vector2(9, 4)
+shape = SubResource("RectangleShape2D_jo52s")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-2.99993, 19)
+scale = Vector2(9, 4)
+shape = SubResource("RectangleShape2D_jo52s")
+
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
